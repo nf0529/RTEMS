@@ -2,8 +2,13 @@
 VMware 
 Linux 22.04
 ## 설치 환경
-git clone 형식
+
 ### 내용
+sudo apt update
+sudo apt install -y git gcc g++ make automake autoconf libtool pkg-config bison>
+cd rtems_waf
+./waf configure
+./waf
 
 #### 오류 해결
 1.
@@ -23,6 +28,8 @@ git submodule update
 환경 변수 설정
 설치 후, PATH 환경 변수에 RTEMS 바이너리 경로를 추가합니다. 예를 들어, 다음 명령을 터미널에 입력하여 RTEMS 바이너리가 포함된 디렉토리를 환경 변수에 추가합니다:
 
-bash
-코드 복사
 export PATH=$HOME/quick-start/rtems/6/bin:$PATH
+
+How to Run :
+rtems-run --rtems-bsps=erc32-sis build/sparc-rtems6-erc32/hello.exe
+
